@@ -3,39 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Social Media Dashboard</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Social Media Hub</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Social Media Dashboard</h1>
-            <nav>
-                <button onclick="showPage('account-management')">Account Management</button>
-                <button onclick="showPage('post-scheduler')">Post Scheduler</button>
-            </nav>
-        </header>
-        <main>
-            <section id="account-management" class="page">
-                <h2>Account Management</h2>
-                <div id="accounts">
-                    <!-- Accounts will be dynamically added here -->
-                </div>
-                <button onclick="linkAccount()">Link New Account</button>
-            </section>
-            <section id="post-scheduler" class="page">
-                <h2>Post Scheduler</h2>
-                <form id="scheduler-form">
-                    <textarea id="post-content" placeholder="Write your post here..."></textarea>
-                    <input type="datetime-local" id="post-time">
-                    <button type="button" onclick="schedulePost()">Schedule Post</button>
-                </form>
-                <h3>Scheduled Posts</h3>
-                <div id="scheduled-posts"></div>
-            </section>
-        </main>
-    </div>
-    <script src="scripts.js"></script>
+    <header>
+        <img src="logo.png" alt="Social Media Hub Logo"> <h1>Social Media Hub</h1>
+        <nav>
+            <ul>
+                <li><a href="#account-management">Manage Accounts</a></li>
+                <li><a href="#post-scheduler">Schedule Posts</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="account-management">
+            <h2>Connected Accounts</h2>
+            <div class="account-list"></div>
+            <button id="link-account">Link New Account</button>
+        </section>
+        <section id="post-scheduler">
+            <h2>Schedule Your Message</h2>
+            <form id="schedule-post-form">
+                <label for="content">What's on your mind?</label>
+                <textarea id="content" name="content" rows="5"></textarea>
+                <label for="schedule-time">Schedule Time:</label>
+                <input type="datetime-local" id="schedule-time" name="schedule-time">
+                <button type="submit">Schedule Post</button>
+            </form>
+            <div class="scheduled-posts">
+                <h2>Upcoming Posts <span id="post-count">(0)</span></h2> </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>
+
 
