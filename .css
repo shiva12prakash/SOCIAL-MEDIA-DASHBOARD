@@ -1,0 +1,91 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav button {
+    background-color: white;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    margin-left: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: #007bff;
+}
+
+nav button:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+
+#scheduler-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#scheduler-form textarea, 
+#scheduler-form input {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#scheduler-form button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#scheduler-form button:hover {
+    background-color: #0056b3;
+}
+
+#accounts, #scheduled-posts {
+    margin-top: 20px;
+}
+
+.account, .post {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+}
+
