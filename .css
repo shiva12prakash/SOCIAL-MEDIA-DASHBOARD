@@ -1,91 +1,41 @@
-/* styles.css */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f0f0;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-header {
+.account-list div {
+    
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 0.5rem;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    background-color: #007bff;
-    color: white;
-    padding: 20px;
 }
 
-header h1 {
-    margin: 0;
+.account-list div img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 1rem;
 }
 
-nav button {
-    background-color: white;
-    border: 1px solid #007bff;
-    border-radius: 4px;
-    margin-left: 10px;
-    padding: 10px 20px;
-    cursor: pointer;
-    color: #007bff;
+.account-list div p {
+    font-weight: bold;
 }
 
-nav button:hover {
-    background-color: #007bff;
-    color: white;
-}
-
-.page {
-    display: none;
-}
-
-.page.active {
-    display: block;
-}
-
-#scheduler-form {
-    display: flex;
-    flex-direction: column;
-}
-
-#scheduler-form textarea, 
-#scheduler-form input {
-    margin-bottom: 10px;
-    padding: 10px;
-    font-size: 16px;
+.scheduled-posts {
     border: 1px solid #ddd;
-    border-radius: 4px;
+    border-radius: 5px;
+    padding: 1rem;
+    position: relative;
 }
 
-#scheduler-form button {
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+.scheduled-posts::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #ddd;
 }
 
-#scheduler-form button:hover {
-    background-color: #0056b3;
-}
-
-#accounts, #scheduled-posts {
-    margin-top: 20px;
-}
-
-.account, .post {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    margin-bottom: 10px;
-    background-color: #f9f9f9;
-}
 
